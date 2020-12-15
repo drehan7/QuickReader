@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{%block content%}
+<header>
+    <h1>QuickReader App</h1>
+</header>
+
+{% for word in words%}
+{{ word }}
+{% endfor %}
+
+<br>
+
+<span>
+    <a href="/">Return to home</a>
+</span>
+
+{%endblock%}
+
+
+
+
+

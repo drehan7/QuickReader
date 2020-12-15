@@ -1,0 +1,44 @@
+* {
+  background-color: rgb(178, 224, 237);
+  text-align: center;
+  margin: 0px;
+}
+header h1 {
+  margin: 0px;
+  padding-top: 20px;
+  font-family: Monaco;
+  padding-bottom: 20px;
+}
+
+#user_input {
+  background-color: white;
+  margin-top: 50px;
+  border: black;
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px 0px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+
+#input_submit_button {
+  margin-top: 50px;
+  background-color: white;
+  width: 200;
+  height: 50px;
+  font-size: 19px;
+  font-family: Monaco;
+}
+
+a {
+  background-color: rgb(178, 224, 237);
+  text-align: center;
+  margin: 0px;
+}
+
+#my-nav {
+  background-color: rgb(178, 224, 237);
+  margin: 0px;
+  padding: 0%;
+}
