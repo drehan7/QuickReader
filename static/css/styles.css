@@ -11,6 +11,10 @@ header h1 {
 }
 
 #user_input {
+    
+    padding 20px;
+    flex: 50%;
+
   background-color: white;
   margin-top: 50px;
   border: black;
