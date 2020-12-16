@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('static', filename='css/styles.css')}}">
+{% endblock %}
+
+
+{% block title %}
+Wud Quick Reader App
+{%endblock%}
+
+
+<header>
+    <h1>QuickReader App</h1>
+</header>
+
+{%block content%}
+{%endblock%}

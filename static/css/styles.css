@@ -11,9 +11,8 @@ header h1 {
 }
 
 #user_input {
-    
-    padding 20px;
-    flex: 50%;
+  padding: 20px;
+  flex: 50%;
 
   background-color: white;
   margin-top: 50px;
@@ -45,4 +44,37 @@ a {
   background-color: rgb(178, 224, 237);
   margin: 0px;
   padding: 0%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.words {
+  font-size: 100px;
+  font-style: italic;
+
+  margin: 0px;
+  padding-top: 150px;
+}
+
+#next-word-button {
+  border-radius: 0 100% 100% 0 / 50%;
+  height: 55px;
+  background-color: lightgreen;
+  font-weight: bold;
+  width: 130px;
+  align-self: center;
+  margin-top: 150px;
+}
+
+#prev-word-button {
+  border-radius: 100% 0 0 100% / 50%;
+  height: 55px;
+  background-color: lightgreen;
+  font-weight: bold;
+  width: 130px;
+  align-self: center;
+  margin-top: 150px;
 }

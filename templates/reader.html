@@ -6,15 +6,21 @@
     <h1>QuickReader App</h1>
 </header>
 
-{% for word in words%}
+<!-- {% for word in words%}
 {{ word }}
-{% endfor %}
+{% endfor %} -->
+<div class="words">
+    <span>
+        {{words[1]}}
+    </span>
 
-<br>
 
-<span>
-    <a href="/">Return to home</a>
-</span>
+</div>
+<div class="word-buttons">
+    <button onclick="prev_word()" id="prev-word-button">Previous Word</button>
+    <button onclick="next_word()" id="next-word-button">Next Word</button>
+</div>
+
 
 {%endblock%}
 

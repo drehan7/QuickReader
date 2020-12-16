@@ -32,9 +32,9 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/reader')
-def reader():
-    return render_template('reader.html')
+# @app.route('/reader')
+# def reader():
+#     return render_template('reader.html')
 
 
 def split_user_input(user_input):
