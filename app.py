@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, flash, redirect
 
 from flask_bootstrap import Bootstrap
 
@@ -26,7 +26,12 @@ def index():
     if request.method == "POST":
         req = request.form
         words = split_user_input(req)
-        return render_template('reader.html', words=words)
+        if len(words) > 0:
+            return render_template('reader.html', words=words)
+        else:
+            flash("Enter text below")
+            return redirect(url_for('index'))
+
         # print(req)
 
     return render_template('index.html')
