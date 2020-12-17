@@ -2,23 +2,24 @@
 
 
 {%block content%}
-<header>
-    <h1>QuickReader App</h1>
-</header>
+<div class="heading">
+    <header>
+        <h1 style="text-align:center;">
+          <a href="/">QuickReader</a>
+         </h1>
+    </header>
+</div>
 
-<!-- {% for word in words%}
-{{ word }}
-{% endfor %} -->
 <div class="words">
     <span>
-        {{word}}
+        <span id="current-word">{{word}}</span>
     </span>
 
 
 </div>
 <div class="word-buttons">
-<button onclick="" id="prev-word-button">Previous Word</button>
-    <button onclick="" id="next-word-button">Next Word</button>
+        <button onclick="" id = "prev-word-button"name="prev-word-button">Previous Word</button>
+        <button  onclick="" id ="next-word-button" name="next-word-button">Next Word</button>
 </div>
 
 

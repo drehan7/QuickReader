@@ -18,28 +18,29 @@ class NameForm(FlaskForm):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    # name = None
-    # form = NameForm()
-    # if form.validate_on_submit():
-    #     name = form.name.data
-    #     form.name.data = ''
+
     if request.method == "POST":
         req = request.form
         words = split_user_input(req)
         if len(words) > 0:
-            return render_template('reader.html', words=words)
+            return reader()
         else:
             flash("Enter text below")
             return redirect(url_for('index'))
 
-        # print(req)
-
     return render_template('index.html')
 
 
-# @app.route('/reader')
-# def reader():
-#     return render_template('reader.html')
+@app.route('/reader')
+def reader():
+    words = request.form.get('user_input').split()
+    i = 0
+    word = words[i]
+    return render_template('reader.html', word=word)
+
+
+def word_nav():
+    pass
 
 
 def split_user_input(user_input):

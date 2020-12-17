@@ -10,6 +10,17 @@ header h1 {
   padding-bottom: 20px;
 }
 
+.heading header a {
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+.heading header a:hover {
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
 #user_input {
   padding: 20px;
   flex: 50%;
