@@ -18,13 +18,17 @@
 
 </div>
 <div class="word-buttons">
-        <button onclick="" id = "prev-word-button"name="prev-word-button">Previous Word</button>
-        <button  onclick="" id ="next-word-button" name="next-word-button">Next Word</button>
+    <form action="/reader" method='POST'>
+        <input type="submit" name="one_button" id="prev-word-button" value="Previous Word">
+        <input type="submit" name="one_button" id="next-word-button" value="Next Word">
+    </form>
 </div>
 
 
 {%endblock%}
 
+        <!-- <button type="button" id = "prev-word-button"name="navigation_button" value="next-word">Previous Word</button>
+        <button type="button" id ="next-word-button" name="navigation_button" value="prev-word">Next Word</button> -->
 
 
 

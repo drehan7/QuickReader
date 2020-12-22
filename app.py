@@ -16,14 +16,19 @@ class NameForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+user_words = list()
+
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    global user_words
 
     if request.method == "POST":
         req = request.form
         words = split_user_input(req)
         if len(words) > 0:
-            return reader()
+            user_words = words
+            return redirect(url_for('reader'))
         else:
             flash("Enter text below")
             return redirect(url_for('index'))
@@ -31,12 +36,26 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/reader')
+@app.route('/reader', methods=['GET', 'POST'])
 def reader():
-    words = request.form.get('user_input').split()
+    global user_words
+    url = 'reader.html'
     i = 0
-    word = words[i]
-    return render_template('reader.html', word=word)
+    if request.method == 'GET':
+        return render_template(url, word=user_words[i])
+    if request.method == 'POST' and request.form["one_button"] == "Next Word":
+        i += 1
+        print("Next button pressed")
+    if request.method == 'POST' and request.form["one_button"] == "Previous Word":
+        i = 0
+        print("Prev button pressed")
+        # elif request.form["prev_button"] == "Previous Word":
+        #     if i > 0:
+        #         i -= 1
+
+    print(len(user_words))
+    print("i = ", i)
+    return render_template(url, word=user_words[i])
 
 
 def word_nav():

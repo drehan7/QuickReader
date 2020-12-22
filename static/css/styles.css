@@ -62,6 +62,10 @@ body {
   padding: 0px;
 }
 
+#current-word {
+  content: "TeSTIng";
+}
+
 .words {
   font-size: 100px;
   font-style: italic;
